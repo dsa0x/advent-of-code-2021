@@ -135,7 +135,7 @@ func main() {
 	input = input[2:]
 	boards := [][][]string{}
 	board := [][]string{}
-	// boardNum := 0
+
 	for _, line := range input {
 		if line == "" {
 			boards = append(boards, board)
@@ -146,12 +146,6 @@ func main() {
 		board = append(board, strings.Split(line, " "))
 	}
 	boards = append(boards, board)
-
-	// for i := 0; i < len(boards); i++ {
-	// 	// fmt.Println(boards[i])
-	// 	fmt.Println(day4(boards[i], randoms))
-	// }
-	// fmt.Println(board, randoms)
 
 	fmt.Println(Part1(boards, randoms))
 	fmt.Println(Part2(boards, randoms))
